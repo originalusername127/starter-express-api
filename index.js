@@ -9,6 +9,7 @@ dotenv.config()
 
 app.get('/', (req, res) => {
     res.send("GO AWAY")
+    console.log(req.headers['x-forwarded-for'])
 })
 app.listen(3000)
 client.login(process.env.Token)
